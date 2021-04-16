@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'echo "Salam"'
+                sh '/scripts/diff.sh'
             }
         }
     }
