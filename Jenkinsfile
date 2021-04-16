@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'infracost'
+                sh 'echo "Salam"'
             }
         }
     }
