@@ -1,5 +1,5 @@
 pipeline {
-    gent {
+    agent {
                 docker { image 'infracost' }
             }
     stages {
