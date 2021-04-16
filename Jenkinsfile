@@ -5,7 +5,7 @@ pipeline {
             agent {
                 docker {
                   image 'infracost/infracost'
-                  args '--entrypoint=/bin/sh'
+                  args '--entrypoint='
                 }
             }
             steps {
