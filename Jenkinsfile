@@ -8,7 +8,7 @@ pipeline {
                 docker { image 'infracost/infracost' }
             }
             steps {
-                breakdown
+                sh "breakdown"
             }
         }
     }
