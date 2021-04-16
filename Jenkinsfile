@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-                docker { image 'infracost/infracost' }
-            }
+    agent any
     stages {
         stage('infracost-breakdown') {
             agent {
