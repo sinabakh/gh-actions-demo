@@ -1,9 +1,12 @@
 pipeline {
     agent { docker { image 'golang' } }
     stages {
-        stage('build') {
+        stage('infracost-breakdown') {
+            agent {
+                docker { image 'infracost' }
+            }
             steps {
-                sh 'go version'
+                sh 'infracost help'
             }
         }
     }
