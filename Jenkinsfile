@@ -5,10 +5,13 @@ pipeline {
     stages {
         stage('infracost-breakdown') {
             agent {
-                docker { image 'infracost/infracost' }
+                docker {
+                  image 'infracost/infracost'
+                  args '--entrypoint=/bin/sh'
+                }
             }
             steps {
-                breakdown
+                sh 'infracost'
             }
         }
     }
