@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh '/scripts/diff.sh'
+                sh '/scripts/ci/diff.sh'
             }
         }
     }
