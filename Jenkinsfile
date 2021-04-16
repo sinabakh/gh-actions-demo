@@ -1,5 +1,4 @@
 pipeline {
-    agent { docker { image 'golang' } }
     stages {
         stage('infracost-breakdown') {
             agent {
