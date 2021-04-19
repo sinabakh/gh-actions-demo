@@ -14,6 +14,7 @@ pipeline {
 
             steps {
                 sh '/scripts/ci/diff.sh terraform'
+                sh 'cat infracost_breakdown.json'
             }
         }
     }
