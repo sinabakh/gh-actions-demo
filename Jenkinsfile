@@ -10,11 +10,10 @@ pipeline {
             }
             environment {
               INFRACOST_API_KEY = credentials('jenkins-infracost-api-key')
-              PATH = 'terraform'
             }
 
             steps {
-                sh '/scripts/ci/diff.sh'
+                sh '/scripts/ci/diff.sh terraform'
             }
         }
     }
