@@ -4,7 +4,7 @@ pipeline {
         stage('infracost-breakdown') {
             agent {
                 docker {
-                  image 'infracost/infracost'
+                  image 'infracost-local'
                   args '--user=root --entrypoint='
                 }
             }
