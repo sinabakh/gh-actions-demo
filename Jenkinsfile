@@ -13,15 +13,15 @@ pipeline {
             }
 
             steps {
-                sh '/scripts/ci/diff.sh terraform'
-                sh 'cat infracost_diff_message.html'
+                sh '/scripts/ci/jenkins_diff.sh terraform'
+                sh 'cat infracost_diff_output.html'
 
                 publishHTML (target: [
                     	allowMissing: false,
       		    	alwaysLinkToLastBuild: false,
       			keepAll: true,
       			reportDir: './',
-      			reportFiles: 'infracost_diff_message.html',
+      			reportFiles: 'infracost_diff_output.html',
       			reportName: "Infracost Diff Output"
     		])
 
