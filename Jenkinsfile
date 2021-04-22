@@ -9,8 +9,8 @@ pipeline {
                 }
             }
             environment {
-              INFRACOST_API_KEY = credentials('jenkins-infracost-api-key')
-              IAC_PATH = "terraform"
+              infracost_api_key = credentials('jenkins-infracost-api-key')
+              iac_path = "terraform"
             }
 
             steps {
