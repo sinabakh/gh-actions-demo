@@ -10,11 +10,11 @@ pipeline {
             }
             environment {
               INFRACOST_API_KEY = credentials('jenkins-infracost-api-key')
+              IAC_PATH = "terraform"
             }
 
             steps {
-                sh '/scripts/ci/jenkins_diff.sh terraform'
-                sh 'cat infracost_diff_output.html'
+                sh '/scripts/ci/jenkins_diff.sh'
 
                 publishHTML (target: [
                     	allowMissing: false,
