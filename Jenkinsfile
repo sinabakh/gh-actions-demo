@@ -10,7 +10,8 @@ pipeline {
             }
             environment {
               INFRACOST_API_KEY = credentials('jenkins-infracost-api-key')
-              IAC_PATH = "terraform"
+              IAC_PATH = 'terraform'
+              FAIL_CONDITION = '{"percentage_threshold": 0}'
             }
 
             steps {
